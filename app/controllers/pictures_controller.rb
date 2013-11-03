@@ -1,4 +1,15 @@
 class PicturesController < ApplicationController
   def show
+    @picture = Picture.find(params[:id])
+  end
+
+  def index
+    @list_of_picture = Picture.all
+  end
+
+  def new
+  end
+
+  def create
   end
 end
