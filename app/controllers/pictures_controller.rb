@@ -24,4 +24,8 @@ class PicturesController < ApplicationController
     i.destroy
     @picture = i
   end
+
+  def edit
+    @picture = Picture.find(params[:id])
+  end
 end
