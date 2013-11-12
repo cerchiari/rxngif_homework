@@ -4,6 +4,17 @@
   <% @list_of_picture.each do |picture| %>
     <%= image_tag("#{picture.source}", :width => 200) %>
     <p> <%= picture.caption %></p>
+
+
+
+ <p> </p>
+<%= link_to("View", picture_url(picture.id), :method => "get", :target => "_blank", :class => "btn btn-primary") %>
+
+<%= link_to("Edit", edit_picture_url(picture.id), :method => "get", :target => "_blank", :class => "btn btn-primary") %>
+
+<%= link_to("Delete", picture_url(picture.id), :method => "delete", :target => "_blank", :class => "btn btn-primary") %>
+
+ <p> </p>
   <% end %>
 </ul>
 

@@ -16,13 +16,13 @@
     p.source = params[:source]
     p.caption = params[:caption]
     p.save
-    redirect_to "http://localhost:3000/all_pictures"
+    redirect_to pictures_url
   end
 
   def destroy
     i = Picture.find(params[:id])
     i.destroy
-    redirect_to "http://localhost:3000/all_pictures"
+    redirect_to pictures_url
   end
 
   def edit
@@ -34,7 +34,7 @@
     i.source = params[:source]
     i.caption = params[:caption]
     i.save
-    redirect_to "http://localhost:3000/picture_details/#{i.id}"
+    redirect_to picture_url(i.id)
   end
 
 end
